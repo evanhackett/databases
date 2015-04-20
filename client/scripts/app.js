@@ -1,6 +1,6 @@
 // YOUR CODE HERE:
 var app = {
-  server : 'http://127.0.0.1:3000/classes/messages',
+  server : 'http://localhost:3000/classes/messages',
   rooms : {},
   currentRoom: undefined,
   recentFetch : {},
@@ -26,7 +26,7 @@ app.init = function() {
 app.send = function(message) {
   $.ajax({
     // always use this url
-    url: 'http://127.0.0.1:3000/classes/messages',
+    url: 'http://localhost:3000/classes/messages',
     type: 'POST',
     data: message,
     contentType: 'application/json',
@@ -46,7 +46,7 @@ app.send = function(message) {
 
 app.fetch = function() {
   $.ajax({
-    url: 'http://127.0.0.1:3000/classes/messages',
+    url: 'http://localhost:3000/classes/messages',
     type: 'GET',
     contentType: 'application/json',
     success: function(data) {
